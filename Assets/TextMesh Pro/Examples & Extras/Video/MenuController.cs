@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
+namespace NewBehaviourScriptspace{
 public class NewBehaviourScript : MonoBehaviour
 {
      public VideoPlayer videoPLayer;
@@ -27,4 +28,5 @@ public class NewBehaviourScript : MonoBehaviour
         }
         
     }
+}
 }
