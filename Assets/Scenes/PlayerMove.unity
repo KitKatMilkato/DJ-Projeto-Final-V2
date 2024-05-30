@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 188991314}
   - component: {fileID: 188991316}
   - component: {fileID: 188991315}
+  - component: {fileID: 188991317}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -207,6 +208,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &188991317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188991313}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.9155953, z: 1}
+  m_Center: {x: 0, y: -0.024770737, z: 0}
 --- !u!1 &632291987
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,15 +502,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3dedf6967bc99f34fb721466b2b9669f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4063067
+      value: 1.1576998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dedf6967bc99f34fb721466b2b9669f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4063067
+      value: 1.1576998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dedf6967bc99f34fb721466b2b9669f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4063067
+      value: 1.1576998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dedf6967bc99f34fb721466b2b9669f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -700,9 +722,6 @@ GameObject:
   m_Component:
   - component: {fileID: 863211593}
   - component: {fileID: 863211594}
-  - component: {fileID: 863211595}
-  - component: {fileID: 863211597}
-  - component: {fileID: 863211596}
   m_Layer: 8
   m_Name: DoorOrigin
   m_TagString: Untagged
@@ -747,57 +766,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!111 &863211595
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863211592}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 9ae2b6a53a2c6c048a8fbfd09d583b93, type: 2}
-  - {fileID: 7400000, guid: 4b3747ca2eb7d2d4d9bd9788b55622c5, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &863211596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863211592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64247045763f80c44b17f5c9fabe2068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openAnimationName: DoorOpen
-  closeAnimationName: DoorClose
-  timeToShowUI: 1
-  showDoorLockedUI: {fileID: 0}
-  _keyInventory: {fileID: 842662581}
-  waitTimer: 1
-  pauseInteraction: 0
---- !u!114 &863211597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863211592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31dbc49ee7d9a144682a11117d9fdae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redDoor: 1
-  redKey: 0
-  _keyInventory: {fileID: 842662581}
 --- !u!1 &901460283
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,9 +778,11 @@ GameObject:
   - component: {fileID: 901460287}
   - component: {fileID: 901460286}
   - component: {fileID: 901460285}
+  - component: {fileID: 901460289}
+  - component: {fileID: 901460288}
   m_Layer: 8
   m_Name: RedDoor
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -903,6 +873,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901460283}
   m_Mesh: {fileID: 698489126093041618, guid: 3dedf6967bc99f34fb721466b2b9669f, type: 3}
+--- !u!114 &901460288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901460283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64247045763f80c44b17f5c9fabe2068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAnimationName: DoorOpen
+  closeAnimationName: DoorClose
+  timeToShowUI: 1
+  showDoorLockedUI: {fileID: 0}
+  _keyInventory: {fileID: 842662581}
+  waitTimer: 1
+  pauseInteraction: 0
+--- !u!114 &901460289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901460283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31dbc49ee7d9a144682a11117d9fdae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redDoor: 1
+  redKey: 0
+  _keyInventory: {fileID: 842662581}
 --- !u!65 &945120925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -991,6 +995,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5d9ab103dfb55684fa9de3bbe54219bf, type: 3}
       propertyPath: m_Name
       value: RedKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d9ab103dfb55684fa9de3bbe54219bf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d9ab103dfb55684fa9de3bbe54219bf, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
