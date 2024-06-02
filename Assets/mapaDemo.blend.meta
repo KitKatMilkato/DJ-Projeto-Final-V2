@@ -7,18 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RadioV2
+    second: {fileID: 2100000, guid: d242979cd07863e4e9a6e79b47b7aaf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: chao
-    second: {fileID: 2100000, guid: 104c485d6c97ac04ca26807cab7e0a4a, type: 2}
+    second: {fileID: 2100000, guid: d216e07b0b1b4c749ace5537db334ebe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: chaousar
-    second: {fileID: 2100000, guid: d41e01cacf88228428471f01abe7bff3, type: 2}
+    second: {fileID: 2100000, guid: 29e3430c434a558429c3edaf634cd1a2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: corarvores
-    second: {fileID: 2100000, guid: 4d89ae1ead45b3d42967f725e49dc44c, type: 2}
+    second: {fileID: 2100000, guid: 7f65d88688cefcc41bb7be1a7ffe4634, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: corda
+    second: {fileID: 2100000, guid: 7003bd8939388e0408d06efe6055c8e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lanterna
+    second: {fileID: 2100000, guid: 4bcaee4bc204911428b9deb811a14918, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
