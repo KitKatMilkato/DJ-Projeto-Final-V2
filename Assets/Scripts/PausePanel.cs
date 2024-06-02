@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PausePanel : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject Pausepanel;
 
-    // Update is called once per frame
     void Update()
     {
         
