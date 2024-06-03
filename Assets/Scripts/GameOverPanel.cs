@@ -27,7 +27,7 @@ public class GameOverPanel : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("NewMenu");
     }
 
     public void QuitGame()
