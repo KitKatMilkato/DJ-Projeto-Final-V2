@@ -3529,14 +3529,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Welcome to the player movement tutorial! In this guide, we will explore
-    the essential controls you will use to navigate through the game world.
+    the essential controls you will use to navigate through the game world. Look
+    to your right with the mouse.
 
 
 
-    To
-    move your character, use the WSAD keys: W for forward, S for backward, A for
-    left, and D for right. Press the space key to make your character jump and use
-    the Shift key to run.
+    To move your character, use the WSAD keys:
+    W for forward, S for backward, A for left, and D for right. Reach the Flashlight
+    and Walkie Talkie and press E. Press the space key to make your character jump
+    and use the Shift key to run.
 
 '
   m_isRightToLeft: 0
@@ -3832,6 +3833,75 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00280277, y: 0.00082019874, z: 0.022971628}
   m_Center: {x: -0.0007874804, y: 0.0000064476026, z: 0.011484978}
+--- !u!1001 &1721534462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 839.19226
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 839.19226
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 839.19226
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -91.448135
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.852875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 129.51065
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.706972
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.698271
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.013808904
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.11143421
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -82.052
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 79.814
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
+      propertyPath: m_Name
+      value: branch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 54ccfbd0fbe137144af2567be6dc8b29, type: 3}
 --- !u!1 &1867744201
 GameObject:
   m_ObjectHideFlags: 0
@@ -5390,3 +5460,4 @@ SceneRoots:
   - {fileID: 1583352165}
   - {fileID: 1267070259}
   - {fileID: 2120392525}
+  - {fileID: 1721534462}
