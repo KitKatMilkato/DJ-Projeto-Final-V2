@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     bool isGrounded;
     float initialSpeed;
 
-    // Declaração de um evento de delegado
+    // Declaraï¿½ï¿½o de um evento de delegado
     public delegate void TutorialEventHandler();
     public static event TutorialEventHandler OnTutorialTriggered;
 
@@ -45,7 +45,7 @@ public class PlayerMove : MonoBehaviour
             speed = initialSpeed;
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (other.CompareTag("TT"))
         {
-            // Verificar se alguém está ouvindo o evento e, em seguida, chamar o evento
+            // Verificar se alguï¿½m estï¿½ ouvindo o evento e, em seguida, chamar o evento
             if (OnTutorialTriggered != null)
             {
                 OnTutorialTriggered();
