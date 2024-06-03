@@ -12,20 +12,13 @@ public class NewBehaviourScript : MonoBehaviour
      private Animator aniomatorRawImage;
     void Start()
     {
-        rawImage.SetActive(false);
-        aniomatorRawImage = rawImage.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!videoPLayer.isPlaying && Input.anyKey) 
-        {
-             videoPLayer.Play();
-             aniomatorRawImage.SetTrigger("Fade-in");
-             rawImage.SetActive(true);
-             menuOpcoes.SetActive(true);
-        }
+       
         
     }
 }
