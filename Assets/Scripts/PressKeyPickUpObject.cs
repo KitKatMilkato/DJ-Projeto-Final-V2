@@ -8,6 +8,7 @@ public class PressKeyPickUpObject : MonoBehaviour
     public GameObject ThisTrigger;
     public GameObject ObjectOnGround;
     public GameObject ObjectOnHand;
+    public GameObject NextInstruction;
     public bool Action = false;
 
     void Start()
@@ -16,6 +17,7 @@ public class PressKeyPickUpObject : MonoBehaviour
         ThisTrigger.SetActive(true);
         ObjectOnGround.SetActive(true);
         ObjectOnHand.SetActive(false);
+        NextInstruction.SetActive(false);
 
     }
 
@@ -45,6 +47,7 @@ public class PressKeyPickUpObject : MonoBehaviour
                 ObjectOnGround.SetActive(false);
                 ObjectOnHand.SetActive(true);
                 ThisTrigger.SetActive(false);
+                NextInstruction.SetActive(true);
                 Action = false;
 
             }
