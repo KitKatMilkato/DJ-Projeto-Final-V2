@@ -7,12 +7,16 @@ public class RightChoiceController : MonoBehaviour
 {
     [SerializeField] private Transform Spawnpoint;
     [SerializeField] private GameObject SpawnPrefab;
+    private bool IsSpawned = false;
 
   
 private void OnCollisionEnter(Collision collision){
-    
+    if (IsSpawned == false){
+
+    IsSpawned = true;
       GameObject Key = Instantiate(SpawnPrefab, Spawnpoint.position, Quaternion.identity) as GameObject;
+      Destroy(gameObject);
     }
-    
+}
 }
 }

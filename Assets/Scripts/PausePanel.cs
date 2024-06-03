@@ -5,29 +5,46 @@ using UnityEngine.SceneManagement;
 
 public class PausePanel : MonoBehaviour
 {
-    public GameObject Pausepanel;
+    public GameObject PausePanelUI;
+    public static bool GamePaused=false;
 
-    void Update()
+    void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
-    public void Pause()
+    public void Update()
     {
-        Pausepanel.SetActive(true);
-        Time.timeScale = 0;
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            if(GamePaused){
+                Continue();
+            }
+            else{
+                Paused();
+            }
+        }
 
     }
 
     public void Continue()
     {
-        Pausepanel.SetActive(false);
-        Time.timeScale = 1;
+        PausePanelUI.SetActive(false);
+        Time.timeScale=1;
+        GamePaused=false;
     }
+
+    public void Paused()
+    {
+        PausePanelUI.SetActive(true);
+        Time.timeScale=0;
+        GamePaused=true;
+    }
+
 
     public void Home()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("NewMenu");
     }
 
     public void QuitGame()
