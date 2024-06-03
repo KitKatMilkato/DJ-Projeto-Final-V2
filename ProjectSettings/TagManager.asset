@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InteractiveObject
   - TT
+  - TI
   layers:
   - Default
   - TransparentFX
