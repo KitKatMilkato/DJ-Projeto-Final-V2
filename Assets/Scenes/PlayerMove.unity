@@ -3433,14 +3433,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Welcome to the player movement tutorial! In this guide, we will explore
-    the essential controls you will use to navigate through the game world.
+    the essential controls you will use to navigate through the game world. Look
+    to your right with the mouse.
 
 
 
-    To
-    move your character, use the WSAD keys: W for forward, S for backward, A for
-    left, and D for right. Press the space key to make your character jump and use
-    the Shift key to run.
+    To move your character, use the WSAD keys:
+    W for forward, S for backward, A for left, and D for right. Reach the Flashlight
+    and Walkie Talkie and press E. Press the space key to make your character jump
+    and use the Shift key to run.
 
 '
   m_isRightToLeft: 0
