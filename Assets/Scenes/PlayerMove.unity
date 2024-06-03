@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: be66102313766c44d9300a83c9d72c82, type: 2}
 --- !u!1 &3088465 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9083343680214382586, guid: 081f459d40981844c95121ac03a28805, type: 3}
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 188991316}
   gravity: -10
-  speed: 6
+  speed: 8
   GroundCheck: {fileID: 2071455070}
   groundDistance: 0.4
   groundMask:
@@ -1609,9 +1609,77 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.32
       objectReference: {fileID: 0}
+    - target: {fileID: -8567523868424179184, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6307364294013420292, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6307364294013420292, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -2952286723775831884, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 432329207664559426, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 081f459d40981844c95121ac03a28805, type: 3}
       propertyPath: m_Name
       value: mapaDemo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032845158655093219, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032845158655093219, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385853135617229536, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385853135617229536, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3945565500674180177, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3945565500674180177, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880575743553930247, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098413146314689319, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032387315376339304, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032387315376339304, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083343680214382586, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083343680214382586, guid: 081f459d40981844c95121ac03a28805, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2382799219754379413, guid: 5eb4d0aafef67f34fb1ff6550dcf8e80, type: 3}
       propertyPath: m_Intensity
@@ -3272,8 +3340,8 @@ MonoBehaviour:
   - {fileID: 1724185919}
   - {fileID: 310593634}
   aiAnim: {fileID: 1249044053}
-  walkSpeed: 0
-  chaseSpeed: 0
+  walkSpeed: 3
+  chaseSpeed: 6
   minIdleTime: 0
   maxIdleTime: 0
   idleTime: 0
@@ -3285,8 +3353,8 @@ MonoBehaviour:
   jumpscareTime: 0
   walking: 0
   chasing: 0
-  player: {fileID: 0}
-  destinationAmount: 0
+  player: {fileID: 188991314}
+  destinationAmount: 4
   rayCastOffset: {x: 0, y: 0, z: 0}
   deathScene: 
 --- !u!95 &1249044053
