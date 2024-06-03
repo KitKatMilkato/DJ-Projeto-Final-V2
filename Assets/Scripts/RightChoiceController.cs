@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PlushPuzzle{
 public class RightChoiceController : MonoBehaviour
@@ -16,7 +17,11 @@ private void OnCollisionEnter(Collision collision){
     IsSpawned = true;
       GameObject Key = Instantiate(SpawnPrefab, Spawnpoint.position, Quaternion.identity) as GameObject;
       Destroy(gameObject);
+      DoCredits();
     }
 }
+private void DoCredits (){
+        SceneManager.LoadScene("Credits");
+    }
 }
 }
