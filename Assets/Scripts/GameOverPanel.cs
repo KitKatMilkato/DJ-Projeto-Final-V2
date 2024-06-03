@@ -7,9 +7,10 @@ public class GameOverPanel : MonoBehaviour
 {
     public GameObject GameOverpanel;
 
-    void Update()
+    void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void GameOver()
@@ -21,7 +22,7 @@ public class GameOverPanel : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Test trap");
+        SceneManager.LoadScene("PlayerMove");
     }
 
     public void MainMenu()

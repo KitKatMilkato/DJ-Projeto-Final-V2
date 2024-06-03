@@ -9,6 +9,11 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void jogar()
     {
         SceneManager.LoadScene("PlayerMove");
@@ -21,7 +26,7 @@ public class MenuPrincipal : MonoBehaviour
     }
     public void FecharOpcoes()
     {
-        
+
         painelOpcoes.SetActive(false);
         painelMenuInicial.SetActive(true);
     }
