@@ -19,6 +19,14 @@ public class EnemyAI : MonoBehaviour
     public Vector3 rayCastOffset;
     public string deathScene;
 
+    public AudioSource Idle;
+
+    public AudioSource Alert;
+
+    public AudioSource Chase;
+
+    public AudioSource Jumpscare;
+
     void Start()
     {
         walking = true;
@@ -42,6 +50,7 @@ public class EnemyAI : MonoBehaviour
         }
         if (chasing == true)
         {
+            Chase.Play();
             dest = player.position;
             ai.destination = dest;
             ai.speed = chaseSpeed;
@@ -62,6 +71,7 @@ public class EnemyAI : MonoBehaviour
         }
         if (walking == true)
         {
+            Idle.Play();
             dest = currentDest.position;
             ai.destination = dest;
             ai.speed = walkSpeed;
@@ -82,7 +92,8 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator stayIdle()
     {
-        idleTime = Random.Range(minIdleTime, maxIdleTime);
+        
+        idleTime = Random.Range(10f, 30f);
         yield return new WaitForSeconds(idleTime);
         walking = true;
         randNum = Random.Range(0, destinations.Count);
@@ -90,7 +101,9 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator chaseRoutine()
     {
-        chaseTime = Random.Range(minChaseTime, maxChaseTime);
+        
+        
+        chaseTime = Random.Range(10f, 30f);
         yield return new WaitForSeconds(chaseTime);
         walking = true;
         chasing = false;
@@ -99,7 +112,8 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator deathRoutine()
     {
+        
         yield return new WaitForSeconds(jumpscareTime);
-        SceneManager.LoadScene(deathScene);
+        SceneManager.LoadScene("GameOver");
     }
 }
