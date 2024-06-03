@@ -807,7 +807,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 5d9ab103dfb55684fa9de3bbe54219bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e8255494df2370044be18045c0f385ed, type: 2}
+      objectReference: {fileID: 2100000, guid: 59a4fe2199f180245916c58af3cbe480, type: 2}
     - target: {fileID: 919132149155446097, guid: 5d9ab103dfb55684fa9de3bbe54219bf, type: 3}
       propertyPath: m_Name
       value: Old Key
@@ -1245,15 +1245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c2ca0ef73f0a844a6ac661e97f9c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayLength: 5
-  layerMaskInteract:
-    m_Bits: 256
-  excludeLayerName: 
-  raycastedObject: {fileID: 0}
-  openDoorKey: 323
-  isCrosshairActive: 0
-  doOnce: 0
-  interactableTag: InteractiveObject
 --- !u!65 &905579067
 BoxCollider:
   m_ObjectHideFlags: 0
