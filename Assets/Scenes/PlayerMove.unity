@@ -3271,7 +3271,7 @@ MonoBehaviour:
   - {fileID: 986417052}
   - {fileID: 1724185919}
   - {fileID: 310593634}
-  aiAnim: {fileID: 0}
+  aiAnim: {fileID: 1249044053}
   walkSpeed: 0
   chaseSpeed: 0
   minIdleTime: 0
