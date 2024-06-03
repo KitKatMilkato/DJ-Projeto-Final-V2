@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -18,6 +16,10 @@ public class PlayerMove : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     float initialSpeed;
+
+    // Declaração de um evento de delegado
+    public delegate void TutorialEventHandler();
+    public static event TutorialEventHandler OnTutorialTriggered;
 
     void Start()
     {
@@ -58,5 +60,17 @@ public class PlayerMove : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("TT"))
+        {
+            // Verificar se alguém está ouvindo o evento e, em seguida, chamar o evento
+            if (OnTutorialTriggered != null)
+            {
+                OnTutorialTriggered();
+            }
+        }
     }
 }
