@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     bool isGrounded;
     float initialSpeed;
 
-    // Declara��o de um evento de delegado
+    // Declaração de um evento de delegado
     public delegate void TutorialEventHandler();
     public static event TutorialEventHandler OnTutorialTriggered;
 
