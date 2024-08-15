@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerMove.unity
     guid: 9d1247907e26d244e87b6f7b37f0bbae
   - enabled: 1
+    path: Assets/Scenes/Mapa 2.unity
+    guid: b37991ca90e479749b7e3fa0c6d095a3
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: bedf5f3ef19889f4890d1f8531df2fb5
   m_configObjects: {}
