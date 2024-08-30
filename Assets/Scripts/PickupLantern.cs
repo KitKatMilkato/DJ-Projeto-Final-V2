@@ -20,7 +20,7 @@ public class PickUpLantern : MonoBehaviour
         }
     }
 
-private Vector3 originalScale;  // Adicione essa variável no início da classe
+private Vector3 originalScale;  // Variável para armazenar a escala original da lanterna
 
 void Update()
 {
@@ -44,11 +44,11 @@ void Update()
                 // Mover a lanterna para o ponto de segurar
                 lantern.transform.SetParent(lanternHoldPoint);
 
-                // Definir a posição e a rotação locais da lanterna
+                // Certificar que a posição e rotação estão corretas
                 lantern.transform.localPosition = Vector3.zero;
                 lantern.transform.localRotation = Quaternion.identity;
 
-                // Manter a escala original da lanterna
+                // Restaurar a escala original da lanterna
                 lantern.transform.localScale = originalScale;
 
                 // Tornar a lanterna cinemática para evitar que a física a mova
