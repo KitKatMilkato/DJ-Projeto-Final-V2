@@ -27,16 +27,18 @@ public class PausePanel : MonoBehaviour
                 Paused();
             }
         }
-        if (Input.GetKeyDown(KeyCode.H))
+
+        // Changed from 'H' to 'L' for returning to the menu
+        if (Input.GetKeyDown(KeyCode.L))
         {
             Home();
         }
-        if (Input.GetKeyDown(KeyCode.Backspace))
+
+        // Changed from 'Backspace' to 'Ç' for quitting the game
+        if (Input.GetKeyDown(KeyCode.O))
         {
             QuitGame();
         }
-
-
     }
 
     public void Continue()
@@ -53,16 +55,13 @@ public class PausePanel : MonoBehaviour
         GamePaused = true;
     }
 
-
     public void Home()
     {
-
         SceneManager.LoadScene("NewMenu");
     }
 
     public void QuitGame()
     {
-
         Application.Quit();
     }
 }
