@@ -11,6 +11,10 @@ public class KillOnKeyPress : MonoBehaviour
     [SerializeField] private Image transitionImage; // Imagem para a transição de tela
     [SerializeField] private float transitionDuration = 1f; // Duração da transição (em segundos)
 
+    public GameObject InstrucaoK;
+
+    public bool Action = false;
+
     void Update()
     {
         if (Input.GetKeyDown(killKey))
@@ -18,6 +22,21 @@ public class KillOnKeyPress : MonoBehaviour
             PlaySound();
             StartCoroutine(KillPlayerWithTransition()); // Inicia a corrotina com transição
         }
+    }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            InstrucaoK.SetActive(true);
+            Action = true;
+        }
+    }
+
+    void OnTriggerExit(Collider collision)
+    {
+        InstrucaoK.SetActive(false);
+        Action = false;
     }
 
     private void PlaySound()
