@@ -7,6 +7,7 @@ TagManager:
   - TT
   - TI
   - Lantern
+  - WalkieTalkie
   layers:
   - Default
   - TransparentFX
