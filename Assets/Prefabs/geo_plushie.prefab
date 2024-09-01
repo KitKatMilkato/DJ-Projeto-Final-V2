@@ -254,7 +254,7 @@ MonoBehaviour:
   gameOverSceneName: GameOver
   audioSource: {fileID: 4094621446316148412}
   transitionImage: {fileID: 2676382667825467305}
-  transitionDuration: 4
+  transitionDuration: 3
 --- !u!82 &4094621446316148412
 AudioSource:
   m_ObjectHideFlags: 0
