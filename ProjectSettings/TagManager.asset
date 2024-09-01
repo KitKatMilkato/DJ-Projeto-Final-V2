@@ -18,7 +18,7 @@ TagManager:
   - Ground
   - 
   - Interact
-  - 
+  - trans
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: trans
+    uniqueID: 3949092719
     locked: 0
