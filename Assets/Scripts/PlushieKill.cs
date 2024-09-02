@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KillOnKeyPress : MonoBehaviour
 {
-    [SerializeField] private KeyCode killKey = KeyCode.K; // A tecla que ativa a ação
+    [SerializeField] private KeyCode killKey = KeyCode.E; // A tecla que ativa a ação foi alterada para 'E'
     [SerializeField] private string gameOverSceneName = "GameOverScene"; // Nome da cena de Game Over
     [SerializeField] private AudioSource audioSource; // Referência ao AudioSource para tocar o áudio
     [SerializeField] private Image transitionImage; // Imagem para a transição de tela
@@ -17,7 +17,8 @@ public class KillOnKeyPress : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(killKey))
+        // Verifica se a tecla 'E' foi pressionada
+        if (Input.GetKeyDown(KeyCode.E))
         {
             PlaySound();
             StartCoroutine(KillPlayerWithTransition()); // Inicia a corrotina com transição
@@ -72,8 +73,8 @@ public class KillOnKeyPress : MonoBehaviour
             }
         }
 
-        // Espera por mais 4 segundos
-        yield return new WaitForSeconds(4);
+        // Espera por mais 2 segundos
+        yield return new WaitForSeconds(2);
 
         // Verifica se o nome da cena não está vazio e carrega a cena
         if (!string.IsNullOrEmpty(gameOverSceneName))

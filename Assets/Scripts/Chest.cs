@@ -38,7 +38,7 @@ public class Chest : MonoBehaviour
     void Update()
     {
         // Verifica se o jogador está próximo e se a tecla 'B' foi pressionada
-        if (isPlayerNearby && Input.GetKeyDown(KeyCode.B))
+        if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
         {
             Destroy(gameObject); // Destrói a caixa
         }
