@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.SceneManagement;
- 
+
 public class WolfAI : MonoBehaviour
 {
     public Transform player; // reference to the player's transform
     public Animator animator; // reference to the enemy's Animator component
- 
+
     public float moveSpeed = 5f; // the enemy's move speed
     public float rotationSpeed = 5f; // the speed at which the enemy rotates
     public float chaseRange = 10f; // the distance at which the enemy starts chasing the player
     public float deathRange = .75f; // the distance at which the enemy kills the player
- 
+
+    public string deathScene;
+
     private void Update()
     {
         // calculate the distance between the enemy and the player
@@ -29,7 +31,7 @@ public class WolfAI : MonoBehaviour
         if (distance < deathRange)
         {
             // loads the active scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("GameOver");
         }
     }
  
