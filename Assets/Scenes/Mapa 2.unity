@@ -7967,14 +7967,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 676523974}
-  gravity: -10
+  gravity: -25
   speed: 20
   GroundCheck: {fileID: 1085571984}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  jumpHeight: 4
+  jumpHeight: 5
   runningSpeed: 50
   footstepAudioSource: {fileID: 974947481}
   footstepClip: {fileID: 8300000, guid: bed61cf2e36e1fa4ea2e5431fc6e36cd, type: 3}
@@ -15393,9 +15393,9 @@ SceneRoots:
   - {fileID: 1389287269}
   - {fileID: 1974811121}
   - {fileID: 1498851517}
-  - {fileID: 1398879112}
   - {fileID: 65802732}
   - {fileID: 1465123696}
   - {fileID: 1449256054}
   - {fileID: 1099600778}
   - {fileID: 920628261}
+  - {fileID: 1398879112}
