@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class KillOnKeyPress : MonoBehaviour
 {
-    [SerializeField] private KeyCode killKey = KeyCode.R; // A tecla que ativa a ação foi alterada para 'E'
+    [SerializeField] private KeyCode killKey = KeyCode.R; // A tecla que ativa a ação foi alterada para 'R'
     [SerializeField] private string gameOverSceneName = "GameOver"; // Nome da cena de Game Over
     [SerializeField] private AudioSource audioSource; // Referência ao AudioSource para tocar o áudio
     [SerializeField] private Image transitionImage; // Imagem para a transição de tela
     [SerializeField] private float transitionDuration = 1f; // Duração da transição (em segundos)
 
     public GameObject InstrucaoK;
-
     public bool Action = false;
+    public bool isPlayerInside = false; // Variável para verificar se o jogador está dentro do Collider
 
     void Update()
     {
-        // Verifica se a tecla 'E' foi pressionada
-        if (Input.GetKeyDown(KeyCode.R))
+        // Verifica se a tecla 'R' foi pressionada e se o jogador está dentro do Collider
+        if (Input.GetKeyDown(KeyCode.R) && isPlayerInside)
         {
             PlaySound();
             StartCoroutine(KillPlayerWithTransition()); // Inicia a corrotina com transição
@@ -27,17 +27,22 @@ public class KillOnKeyPress : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.CompareTag("Player"))
         {
             InstrucaoK.SetActive(true);
             Action = true;
+            isPlayerInside = true; // Define que o jogador está dentro do Collider
         }
     }
 
     void OnTriggerExit(Collider collision)
     {
-        InstrucaoK.SetActive(false);
-        Action = false;
+        if (collision.transform.CompareTag("Player"))
+        {
+            InstrucaoK.SetActive(false);
+            Action = false;
+            isPlayerInside = false; // Define que o jogador saiu do Collider
+        }
     }
 
     private void PlaySound()
