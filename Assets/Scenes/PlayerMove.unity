@@ -1591,7 +1591,7 @@ MonoBehaviour:
   ThisTrigger: {fileID: 242316609}
   ObjectOnGround: {fileID: 430866158}
   ObjectOnHand: {fileID: 0}
-  NextInstruction: {fileID: 52503619}
+  NextInstruction: {fileID: 0}
   Action: 0
 --- !u!1 &252149677
 GameObject:
