@@ -13,6 +13,9 @@ public class PlayerMove : MonoBehaviour
     public float jumpHeight;
     public float runningSpeed = 12f;
 
+    public AudioSource footstepAudioSource; // Fonte de áudio para os passos
+    public AudioClip footstepClip; // Clipe de áudio dos passos
+
     Vector3 velocity;
     bool isGrounded;
     float initialSpeed;
@@ -24,6 +27,13 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         initialSpeed = speed;
+
+        // Certifique-se de que o AudioSource está configurado corretamente
+        if (footstepAudioSource != null)
+        {
+            footstepAudioSource.clip = footstepClip;
+            footstepAudioSource.loop = true; // Fazer o som de passos repetir enquanto o jogador estiver se movendo
+        }
     }
 
     void Update()
@@ -60,17 +70,36 @@ public class PlayerMove : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        // Reproduzir som de passos
+        HandleFootsteps(move.magnitude > 0 && isGrounded);
+    }
+
+    void HandleFootsteps(bool isMoving)
+    {
+        if (isMoving)
+        {
+            if (!footstepAudioSource.isPlaying)
+            {
+                footstepAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (footstepAudioSource.isPlaying)
+            {
+                footstepAudioSource.Stop();
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("TT"))
         {
-            // Verificar se algu�m est� ouvindo o evento e, em seguida, chamar o evento
-            if (OnTutorialTriggered != null)
-            {
-                OnTutorialTriggered();
-            }
+            // Verificar se alguém está ouvindo o evento e, em seguida, chamar o evento
+            OnTutorialTriggered?.Invoke();
         }
     }
 }
+
